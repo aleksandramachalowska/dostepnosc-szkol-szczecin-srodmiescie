@@ -2,7 +2,7 @@
 
 ## Opis projektu
 
-Projekt dotyczy analizy sieciowej czasu dojścia pieszo do szkół w dzielnicy Śródmieście Szczecina. Wykorzystano do jego utworzenia QGIS, PostgreSQL wraz z nakładką PostGIS oraz pgRouting. Wynikiem było utworzenie mapy przedstawiającej izochrony 5, 10 i 15 minut od poszczególnych szkół, pokazujące jak daleko można w tym czasie dojść po dostępnej sieci dróg.
+Projekt dotyczy analizy sieciowej czasu dojścia pieszo do szkół w dzielnicy Śródmieście Szczecina. Wykorzystano do jego utworzenia oprogramowanie QGIS, PostgreSQL wraz z nakładką PostGIS oraz pgRouting. Zakres prac obejmował obróbkę danych, przygotowanie na ich podstawie grafu czasu oraz utworzenie izochron. Ważnym elementem było utworzenie grafu zawierającego węzły będące końcami krawędzi grafu oraz czasu ich przejścia obliczonego na podstawie założonej prędkości poruszania po drogach różnego typu. Dla większości dróg przyjęto prędkość 5 km/h, jednak dla ścieżek było to 4,5 km/h, a dla schodów które zwykle pokonuje się wolniej 2,5 km/h. Korzystając z tak utworzonego grafu odnaleziono jego najbliższe każdej szkole węzły, z których dzięki algorytmowi Dijkstra obliczono dokąd można przejść po sieci w ustalonym czasie 5, 10 i 15 minut. Dalsze prace pozwoliły na utworzenie izochron oraz mapy będącej wynikiem analizy.
 
 ## Wykorzystane technologie
 
