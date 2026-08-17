@@ -2,7 +2,7 @@
 
 ## Opis projektu
 
-Projekt dotyczy analizy sieciowej czasu dojścia pieszo do szkół w dzielnicy Śródmieście Szczecina. Wykorzystano do jego utworzenia oprogramowanie QGIS, PostgreSQL wraz z nakładką PostGIS oraz pgRouting. Zakres prac obejmował obróbkę danych, przygotowanie na ich podstawie grafu czasu oraz utworzenie izochron. Ważnym elementem było utworzenie grafu zawierającego węzły będące końcami krawędzi grafu oraz czasu ich przejścia obliczonego na podstawie założonej prędkości poruszania po drogach różnego typu. Dla większości dróg przyjęto prędkość 5 km/h, jednak dla ścieżek było to 4,5 km/h, a dla schodów które zwykle pokonuje się wolniej 2,5 km/h. Korzystając z tak utworzonego grafu odnaleziono jego najbliższe każdej szkole węzły, z których dzięki algorytmowi Dijkstra obliczono dokąd można przejść po sieci w ustalonym czasie 5, 10 i 15 minut. Dalsze prace pozwoliły na utworzenie izochron oraz mapy będącej wynikiem analizy.
+Projekt dotyczy analizy sieciowej czasu dojścia pieszo do szkół w dzielnicy Śródmieście Szczecina. Wykorzystano do jego utworzenia oprogramowanie QGIS, PostgreSQL wraz z nakładką PostGIS oraz pgRouting. Zakres prac obejmował obróbkę danych, przygotowanie na ich podstawie grafu czasu oraz utworzenie izochron. Ważnym elementem było utworzenie grafu czasu z kosztem przejścia wyrażonym w sekundach. Dla większości dróg przyjęto prędkość poruszania 5 km/h, jednak dla ścieżek było to 4,5 km/h, a dla schodów które zwykle pokonuje się wolniej 2,5 km/h. Dalej odnaleziono najbliższe każdej szkole węzły grafu, z których dzięki algorytmowi Dijkstra obliczono dokąd można przejść po sieci w ustalonym czasie 5, 10 i 15 minut. Wynikiem analizy była mapa zawierająca rozmieszczenie izochron.
 
 ## Wykorzystane technologie
 
@@ -19,7 +19,7 @@ W projekcie wykorzystano dane:
 
 ## Zakres prac
 
-W prac wykonano:
+Prace obejmowały:
 - import danych przestrzennych do bazy PostgreSQL,
 - transformację układów współrzędnych warstw do jednolitego układu EPSG:2176,
 - wyodrębnienie szkół i przycięcie ich do granicy Śródmieścia,
@@ -33,17 +33,16 @@ W prac wykonano:
 - utworzenie izochron czasu dojścia w 5, 10 i 15 minut od szkół,
 - wizualizacja wyników w QGIS oraz utworzenie mapy.
 
-## Wnioski
+## Metodyka
 
 
 
-## Mapa wynikowa
 
-![Mapa dostępności szkół](szkoly.pdf)
 
-## Ograniczenia danych
+## Ograniczenia
 
-Należy uwzględnić, że dane OpenStreetMap mają charakter społecznościowy, co może wpływać na ich kompletność i aktualność. 
+Należy uwzględnić, że dane OpenStreetMap mają charakter społecznościowy, co może wpływać na ich kompletność i aktualność.  
+Dzielnica Śródmieście Szczecina obejmuje tereny leżące w ścisłym centrum miasta, jak również tereny wód, lasów i wysp, dla których dostępność szkół z powodu niezamieszkania nie jest istotna. Dlatego też mapa wynikowa skupia się na lewobrzeżnej części dzielnicy, zachowując mapę poglądową dla całości Śródmieścia.
 
 ## Autor
 
