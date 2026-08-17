@@ -39,7 +39,7 @@ W prac wykonano:
 
 ## Mapa wynikowa
 
-![Mapa dostępności szkółl](szkoly.pdf)
+![Mapa dostępności szkół](szkoly.pdf)
 
 ## Ograniczenia danych
 
